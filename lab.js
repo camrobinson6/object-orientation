@@ -347,7 +347,7 @@ const colors = {
 //do not edit this object
 
 //Code Here 
-let colorsCopy
+let colorsCopy = {...colors};
 
 
 /*
@@ -375,7 +375,9 @@ const shippingInfo = {
 //do not edit the objects above
 
 //Code Here
+ let helensInfo = {...contactInfo, ...shippingInfo};
 
+console.log(helensInfo);
 
 //Print helensInfo to see what it looks like, there should be no repeating properties.
 
@@ -393,7 +395,18 @@ const shippingInfo = {
 */
 
 //Code Here 
+class Vehicle {
+  constructor(capacity, color, mileage){
+    this.capacity = capacity;
+    this.color = color;
+    this.mileage = mileage;
 
+
+  }
+  move(miles){
+    
+  }
+}
 
 /*
   Create a vehicle using your new class and save it to a variable called myFirstVehicle
