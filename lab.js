@@ -5,6 +5,10 @@
 */
 
 //Code here
+let me = {
+  name: 'Cameron',
+  age: '40'
+}
 
 
 
@@ -16,21 +20,27 @@
 //and goodBoy/goodGirl (a boolean).
 
 //Code here
-
+let dog = {
+  name: 'Tyson',
+  color: 'black',
+  age: 7,
+  goodBoy: true
+  
+}
 
 
 //////////////////////////// PROBLEM 3 ////////////////////////////
 /* Print out the name of the dog you created in problem 2 using dot-notation. */
 
 //Code here
-
+console.log(dog.name)
 
 
 //////////////////////////// PROBLEM 4 ////////////////////////////
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
 //Code here
-
+console.log(dog['color'])
 
 
 //////////////////////////// PROBLEM 5 ////////////////////////////
@@ -40,14 +50,22 @@
 */
 
 //Code here
-
+let favoriteThings = {
+  band: 'UGK',
+  food: "pizza",
+  person: "Edrea",
+  book: "bible",
+  movie: "Life",
+  holiday: "Christmas"
+}
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'show' with the value being your favorite show.
 */
 
 //Code here
-
+favoriteThings.car = 'Lamborghini';
+favoriteThings.show = 'Lucifier';
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
@@ -55,6 +73,8 @@
 */
 
 //Code here
+favoriteThings.food = 'Chicken Nuggets'
+favoriteThings.book = 'Harry Potter'
 
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
@@ -73,7 +93,7 @@ var carDetails = {
 */
 
 //Code Here
-
+ let {color: newColor, make: newMake, model: newModel, year: newYear} = carDetails
 
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
@@ -86,7 +106,7 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  const { firstName: newFirst, lastName: newLast, title: newTitle} = obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -105,6 +125,20 @@ function greeting( obj ) {
 */
 
 //Code Here
+let  states= {
+  utah: 21,
+  california: 23,
+  texas:24,
+  arizona:12}
+
+function totalPopulation(states) {
+  const {utah: newUtah, california: newCali, texas: newTexas, arizona: newAriz} = states
+  
+  console.log(states)
+  return (states)
+  
+}
+totalPopulation(states)
 
 
 
@@ -119,8 +153,22 @@ function greeting( obj ) {
 */
 
 //Code Here
+let macros = {
+  carb: 'lowest',
+  fat: 'medium',
+  protein: 'highest'
+}
 
+function ingredients(macros){
+const { carb, fat, protein} = macros
 
+let macrosArr = []
+macrosArr.push(macros);
+
+console.log(macrosArr)
+return(macrosArr)
+}
+ingredients(macros)
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
 // Do not edit the code below.
@@ -141,7 +189,8 @@ var user = {
 */
 
 //Code Here
-
+user.name = 'Bryan G. Smith'
+user.email = 'bryan.smith@devmounta.in'
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
 /*
@@ -149,7 +198,7 @@ var user = {
 */
 
 //Code Here
-
+delete user.age
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
@@ -159,8 +208,17 @@ var user = {
 */
 
 //Code here
+class Cat {
+  constructor(name, age, color){
+    this.name = name;
+    this.age = age;
+    this.color = color;
+  }
 
+}
 
+let houseCat = new Cat('Anna', 2, 'red')
+console.log(houseCat)
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
 /*
@@ -171,6 +229,20 @@ var user = {
 */
 
 //Code here
+class Wizard {
+  constructor(name, age, favoriteSpell){
+    this.name = name;
+    this.age = age;
+    this.favoriteSpell = favoriteSpell;
+  }
+  castSpell() {
+  console.log(`${this.name} has cast ${this.favoriteSpell}`)
+    
+  }
+}
+let darkMagic = new Wizard('Moor', 498, 'freeze')
+darkMagic.castSpell()
+
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
@@ -196,6 +268,28 @@ var user = {
 */
 
 //Code Here
+class Phone {
+  constructor(brand, model, storage, color, price){
+    this.brand = brand;
+    this.model = model;
+    this.storage = storage;
+    this.color = color;
+    this.price = price;
+    this.sold = false;
+  }
+
+  sell(){
+
+    this.sold = true
+    console.log(`${this.brand} ${this.model} has been sold.`)}
+
+    changePrice(newPrice) {
+    this.price = newPrice
+
+    }
+    }
+  
+
 
   
 /*
@@ -209,6 +303,9 @@ var user = {
 */
 
 //Code Here
+let iPhone = new Phone('apple', '13', '1TB', 'blue', '1200')
+let andriod = new Phone('samsung','Note', '2TB', 'orange', '1100')
+let nokia = new Phone('bug', 'hellbird', '3TB', 'red', '1000')
 
 /* 
   Call the changePrice function on one of your phones, 
@@ -218,6 +315,9 @@ var user = {
 */ 
 
 //Code Here 
+nokia.changePrice(450)
+console.log (nokia)
+
 
 
 /*
@@ -227,7 +327,8 @@ var user = {
 */
 
 //Code Here 
-
+iPhone.sell()
+console.log(iPhone)
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
 
@@ -246,7 +347,7 @@ const colors = {
 //do not edit this object
 
 //Code Here 
-
+let colorsCopy
 
 
 /*
